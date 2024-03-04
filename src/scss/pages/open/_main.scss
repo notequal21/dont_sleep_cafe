@@ -1,0 +1,114 @@
+.main_open {
+  background: url(../img/open/main/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 767px) {
+    background-position: 20% 0;
+  }
+
+  &-body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 260px 0 210px;
+
+    @media (max-width: 991px) {
+      padding: 290px 0 150px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 160px 0 70px;
+      flex-direction: column;
+    }
+
+    &__line {
+      position: absolute;
+      right: -220px;
+      top: 110px;
+      pointer-events: none;
+      user-select: none;
+
+      @media (max-width: 991px) {
+        font-size: 20px;
+        top: 165px;
+        right: -50px;
+        width: 350px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &__title {
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
+    }
+
+    &__info {
+      padding: 10px 0 0;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 767px) {
+        margin: 30px 0 0;
+        padding: 0;
+      }
+
+      &-title {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: right;
+        color: #fff;
+
+        @media (max-width: 991px) {
+          font-size: 20px;
+          text-align: left;
+        }
+      }
+
+      &-list {
+        margin: 10px 0 0;
+        padding: 0 0 0 22px;
+
+        @media (max-width: 767px) {
+        }
+
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          text-transform: lowercase;
+          color: #fff;
+
+          &:not(:first-child) {
+            margin: 5px 0 0;
+          }
+        }
+      }
+
+      &-btn {
+        margin: 0 0 0 auto;
+
+        @media (max-width: 991px) {
+          margin: 20px 0 0 auto;
+        }
+        @media (max-width: 767px) {
+          margin: 50px auto 0;
+        }
+      }
+    }
+  }
+}

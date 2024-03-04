@@ -1,4 +1,10 @@
 // -------- imports --------
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination.scss';
+@import '../../node_modules/choices.js/src/styles/choices.scss';
+@import './aos.scss';
+
 @import 'fonts';
 @import 'components/_fonts';
 @import 'components/_normalize.scss';
@@ -9,6 +15,19 @@
 @import 'components/_footer.scss';
 @import 'components/_ui.scss';
 @import 'pages/index/_main.scss';
+@import 'pages/index/_about.scss';
+@import 'pages/index/_watching.scss';
+@import 'pages/index/_form.scss';
+@import 'pages/index/_menu.scss';
+@import 'pages/index/_scalable.scss';
+@import 'pages/index/_gallery.scss';
+@import 'pages/index/_baristas.scss';
+@import 'pages/open/_main.scss';
+@import 'pages/open/_advantages.scss';
+@import 'pages/open/_conditions.scss';
+@import 'pages/open/_support.scss';
+@import 'pages/open/_credit.scss';
+@import 'pages/open/_map.scss';
 
 // fonts --------- &display=swap || &subset=cyrillic-ext
 // throught plugin
@@ -19,12 +38,23 @@
 body {
   font-family: Rubik;
   overflow: auto; // <--- delete this if not necessary
+  font-style: normal;
+  background: #1f1f1f;
+  background-image: url(../img/noise.png);
+}
+
+* {
+  font-style: normal;
 }
 
 .container {
-  max-width: 1080px; // <--- container res +30px for padding
+  max-width: 1100px; // <--- container res +30px for padding
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
 }
 
 .wrapper {
@@ -35,6 +65,7 @@ body {
 }
 
 .content {
+  position: relative;
   flex: 1 1 auto;
 }
 

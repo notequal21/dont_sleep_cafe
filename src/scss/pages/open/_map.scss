@@ -1,0 +1,103 @@
+.map {
+  padding: 184px 0 150px;
+
+  @media (max-width: 991px) {
+    padding: 160px 0 120px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
+
+  &__title {
+    display: inline-block;
+    position: relative;
+
+    font-family: 'Dela Gothic One', sans-serif;
+
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+
+    img {
+      width: 367px;
+      height: 367px;
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      right: 0;
+      object-fit: contain;
+      transform: translate(50%, -50%);
+
+      @media (max-width: 991px) {
+        right: 20px;
+        width: 280px;
+        height: 280px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    margin: 52px 0 0;
+    height: 532px;
+    background: #1f1f1f;
+    border: 1px solid #a68155;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (max-width: 991px) {
+      margin: 30px 0 0;
+      height: 426px;
+    }
+
+    @media (max-width: 767px) {
+      height: 260px;
+    }
+
+    .custom__placemark {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100px;
+      height: 80px;
+      background-color: #000;
+      border-radius: 12px;
+      padding: 10px;
+
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      text-transform: lowercase;
+      color: #fff;
+
+      &::after {
+        content: url('data:image/svg+xml; utf8, <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.31415 11.8584C8.91538 12.4176 8.08462 12.4176 7.68585 11.8584L0.534048 1.83065C0.0619538 1.16871 0.535158 0.25 1.3482 0.25L15.6518 0.250002C16.4648 0.250002 16.938 1.16871 16.466 1.83065L9.31415 11.8584Z" fill="black" /></svg>');
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        transform: translate(-50%, 0);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

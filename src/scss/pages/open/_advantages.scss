@@ -1,0 +1,376 @@
+.advantages {
+  background-image: url(../img/open/advantages/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+
+  @media (max-width: 991px) {
+    padding: 120px 0 160px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 80px 0 100px;
+  }
+
+  &__title {
+    br {
+      display: none;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+
+  &-body {
+    margin: 115px 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 991px) {
+      margin: 100px 0 0;
+    }
+
+    &__item {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+
+        pointer-events: none;
+        user-select: none;
+      }
+
+      &._rectangle {
+        max-width: 490px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff;
+        transform: rotate(-5deg);
+        padding: 40px 25px;
+        border-radius: 10px;
+
+        @media (max-width: 991px) {
+          max-width: 390px;
+          padding: 30px 15px;
+        }
+
+        @media (max-width: 767px) {
+          padding: 8px 15px;
+        }
+
+        &::after {
+          background-image: url(../img/open/advantages/scotch.png);
+          width: 175px;
+          height: 183px;
+          top: -80px;
+          right: -70px;
+
+          @media (max-width: 767px) {
+            width: 173px;
+            height: 126px;
+            top: -50px;
+            right: -70px;
+          }
+        }
+
+        .advantages-body__item {
+          &-title {
+          }
+
+          &-text {
+            @media (max-width: 991px) {
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &._star {
+        margin: -30px 0 0 auto;
+
+        @media (max-width: 991px) {
+          margin: 60px 30px 0 auto;
+        }
+
+        @media (max-width: 767px) {
+          margin: 100px auto 0;
+        }
+
+        &::after {
+          background-image: url(../img/open/advantages/star.svg);
+          width: 217px;
+          height: 239px;
+          top: -130px;
+          right: -150px;
+
+          @media (max-width: 991px) {
+            width: 154px;
+            height: 170px;
+            top: -110px;
+            right: -45px;
+          }
+
+          @media (max-width: 767px) {
+            width: 130px;
+            height: 143px;
+            top: -82px;
+          }
+        }
+
+        .advantages-body__item {
+          &-title {
+            color: #fff;
+            @media (max-width: 767px) {
+              br {
+                display: none;
+              }
+            }
+          }
+
+          &-text {
+            color: #fff;
+            @media (max-width: 991px) {
+              margin: 15px 0 0;
+            }
+
+            @media (max-width: 767px) {
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &._warn {
+        transform: rotate(3deg);
+        margin: 0px auto 0 0;
+
+        @media (max-width: 991px) {
+          margin: 20px auto 0 0;
+        }
+
+        @media (max-width: 767px) {
+          margin: 40px auto 0;
+        }
+
+        &::after {
+          background-image: url(../img/open/advantages/warn.svg);
+          width: 29px;
+          height: 165px;
+          bottom: -30px;
+          left: 20px;
+
+          @media (max-width: 991px) {
+            width: 19px;
+            height: 120px;
+          }
+          @media (max-width: 767px) {
+            left: -20px;
+          }
+        }
+
+        .advantages-body__item {
+          &-title {
+            color: #fff;
+            font-size: 60px;
+
+            @media (max-width: 991px) {
+              font-size: 36px;
+            }
+            @media (max-width: 767px) {
+              font-size: 24px;
+            }
+          }
+
+          &-text {
+            font-family: 'Dela Gothic One', sans-serif;
+            margin: 0;
+            color: #fff;
+            font-size: 20px;
+
+            br {
+              display: none;
+            }
+
+            @media (max-width: 991px) {
+              font-size: 16px;
+            }
+            @media (max-width: 767px) {
+              font-size: 14px;
+
+              br {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      &._eduq {
+        transform: rotate(-13deg);
+        width: 250px;
+        margin: 100px 0 0 auto;
+
+        @media (max-width: 991px) {
+          margin: 140px 40px 0 auto;
+        }
+        @media (max-width: 767px) {
+          margin: 120px auto 0;
+          width: 180px;
+        }
+
+        &::after {
+          background-image: url(../img/open/advantages/pin.png);
+          width: 491px;
+          height: 491px;
+          top: -200px;
+          left: -100px;
+          transform: rotate(-3deg);
+
+          @media (max-width: 991px) {
+            width: 368px;
+            height: 368px;
+            top: -140px;
+            left: -60px;
+          }
+
+          @media (max-width: 767px) {
+            width: 272px;
+            height: 272px;
+            top: -90px;
+            left: -50px;
+          }
+        }
+
+        .advantages-body__item {
+          &-title {
+            text-align: left;
+          }
+
+          &-text {
+            text-align: left;
+          }
+        }
+      }
+
+      &._payback {
+        margin: 50px auto 0 100px;
+
+        @media (max-width: 991px) {
+          margin: 150px auto 0 50px;
+        }
+        @media (max-width: 767px) {
+        }
+
+        &::after {
+          background-image: url(../img/open/advantages/circle.svg);
+          width: 532px;
+          height: 290px;
+          top: -124px;
+          left: -80px;
+
+          @media (max-width: 991px) {
+            width: 406px;
+            left: -50px;
+            top: -140px;
+          }
+          @media (max-width: 767px) {
+            width: 317px;
+            left: -40px;
+            top: -140px;
+          }
+        }
+
+        .advantages-body__item {
+          &-title {
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Rubik', sans-serif;
+            text-transform: lowercase;
+
+            @media (max-width: 767px) {
+              font-size: 14px;
+            }
+
+            span {
+              font-family: 'Dela Gothic One', sans-serif;
+              font-size: 60px;
+              text-transform: uppercase;
+
+              @media (max-width: 991px) {
+                font-size: 36px;
+              }
+              @media (max-width: 767px) {
+                font-size: 24px;
+              }
+            }
+          }
+
+          &-text {
+            color: #fff;
+            font-family: 'Dela Gothic One', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+
+            @media (max-width: 991px) {
+              font-size: 16px;
+            }
+            @media (max-width: 767px) {
+              margin: 0px 0 0;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      &-title {
+        font-family: 'Dela Gothic One', sans-serif;
+
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+        line-height: normal;
+
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+
+      &-text {
+        margin: 15px 0 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: lowercase;
+        text-align: center;
+        color: #000;
+
+        @media (max-width: 991px) {
+          margin: 8px 0 0;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

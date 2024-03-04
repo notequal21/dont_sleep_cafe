@@ -1,0 +1,230 @@
+.form {
+  position: relative;
+  z-index: 1;
+  padding: 150px 0 0;
+  background-image: url(../img/form/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 991px) {
+    &_open {
+      padding: 50px 0 0;
+    }
+  }
+
+  &_open {
+    .form-body__title {
+      span._line {
+        &::before {
+          width: auto;
+          left: 5px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+    &_open {
+      padding: 40px 0;
+    }
+  }
+
+  &-body {
+    padding: 50px 0 70px;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
+    .choices__inner {
+      border-color: #939393;
+    }
+
+    .choices__item {
+      &.choices__placeholder {
+        // color: #fff;
+        opacity: 1;
+      }
+    }
+
+    &__top {
+      display: flex;
+      gap: 35px;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      &._callback {
+        flex-direction: column;
+        gap: 10px;
+
+        .form-body__label {
+          margin: 0 0 0 auto;
+
+          br {
+            display: none;
+          }
+
+          @media (max-width: 991px) {
+            font-size: 25px;
+          }
+          @media (max-width: 767px) {
+            font-size: 16px;
+            text-align: right;
+            line-height: normal;
+
+            br {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &__title {
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      text-transform: lowercase;
+      color: #fff;
+    }
+
+    &__form {
+      margin: 40px auto 0;
+      max-width: 510px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @media (max-width: 767px) {
+        margin: 15px auto 0;
+      }
+
+      & > .just-validate-error-label {
+        display: none;
+      }
+
+      label {
+        width: 100%;
+        margin: 0;
+
+        &:not(._checkbox) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        .just-validate-error-label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 200%;
+          text-transform: lowercase;
+          color: #ff3636 !important;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #939393;
+        padding: 7px 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        color: #fff;
+        background: transparent;
+
+        transition: all 0.3s ease;
+
+        &.just-validate-error-field {
+          border: 1px solid #ff3636;
+        }
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+
+      input {
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      ._checkbox {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: normal;
+        color: #fff;
+
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          user-select: none;
+          opacity: 0;
+          visibility: hidden;
+
+          &:checked + span {
+            &::after {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+
+          &.just-validate-error-field + span {
+            border: 1px solid #ff3636;
+          }
+        }
+
+        span {
+          flex: 0 0 auto;
+          position: relative;
+          border: 1px solid #d9d9d9;
+          width: 20px;
+          height: 20px;
+
+          transition: all 0.3s ease;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: #d9d9d9;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+
+            transition: all 0.3s ease;
+            opacity: 0;
+          }
+        }
+      }
+
+      button {
+        margin: 10px auto 0;
+
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}

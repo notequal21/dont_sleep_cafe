@@ -1,0 +1,162 @@
+.main {
+  position: relative;
+  background: url(../img/main/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100vw - 140px);
+    max-width: 1330px;
+
+    @media (max-width: 991px) {
+      width: calc(100% - 60px);
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 767px) {
+      width: calc(100% - 36px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 260px 0 235px;
+
+    @media (max-width: 767px) {
+      padding: 160px 0 100px;
+      flex-direction: column;
+      justify-content: unset;
+    }
+
+    &__title {
+      position: relative;
+
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
+
+      &-star {
+        position: absolute;
+        right: -188px;
+        bottom: -60px;
+        pointer-events: none;
+        user-select: none;
+
+        @media (max-width: 991px) {
+          width: 190px;
+          right: -160px;
+          bottom: 50px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+
+    &__text {
+      margin: 10px 0 0;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: right;
+      color: #fff;
+      font-family: 'Dela Gothic One', sans-serif;
+      line-height: normal;
+
+      @media (max-width: 767px) {
+        margin: 20px 0 0;
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      margin: 115px 0 0;
+
+      @media (max-width: 767px) {
+        margin: 115px auto 0;
+      }
+    }
+  }
+
+  &-col {
+    display: flex;
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+
+.marquee {
+  position: relative;
+  background: #fff;
+
+  padding: 28px 0 15px;
+
+  @media (max-width: 767px) {
+    padding: 25px 0 20px;
+  }
+
+  &-con {
+    white-space: nowrap;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    gap: 68px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    text-transform: uppercase;
+    color: #0b0b0b;
+    font-family: 'Dela Gothic One', sans-serif;
+
+    @media (max-width: 767px) {
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    p {
+      display: inline-flex;
+      gap: 68px;
+
+      @media (max-width: 767px) {
+        gap: 20px;
+      }
+    }
+  }
+
+  &__elem {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% - 1px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

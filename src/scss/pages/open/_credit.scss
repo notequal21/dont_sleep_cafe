@@ -1,0 +1,57 @@
+.credit {
+  background: #1f1f1f;
+  padding: 50px 0;
+
+  &-body {
+    display: flex;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    &__title {
+      flex: 0 1 280px;
+
+      @media (max-width: 991px) {
+        flex: 0 0 245px;
+      }
+      @media (max-width: 767px) {
+        flex: 1 1 auto;
+      }
+    }
+
+    &__content {
+      flex: 1 1 690px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 0 70px;
+
+      @media (max-width: 991px) {
+        margin: 0 0 0 50px;
+      }
+
+      @media (max-width: 767px) {
+        margin: 20px 0 0;
+        flex: 0 0 auto;
+      }
+
+      &-text {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #fff;
+      }
+
+      &-btn {
+        margin: 0 0 0 auto;
+        @media (max-width: 991px) {
+          margin: 10px 0 0 auto;
+        }
+        @media (max-width: 767px) {
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+}
